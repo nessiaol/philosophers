@@ -33,6 +33,7 @@ MINILIBFT_FILES =	ft_putstr_fd.c \
 
 PHILO_FILES	=	main.c \
 				utils.c \
+				threads.c \
 
 SRCS_MINILIBFT = $(addprefix $(MINILIBFT_PATH)/, $(MINILIBFT_FILES))
 SRCS_PHILO = $(addprefix $(PHILO_PATH)/, $(PHILO_FILES))
@@ -49,7 +50,7 @@ $(OBJS) : $(SRCS)
 
 $(NAME) : $(OBJS)
 	@echo Compiling: $(NAME)
-	@$(CC) $(FLAGS) $(HPATH) $(OBJS) -o $(NAME)
+	@$(CC) $(FLAGS) $(HPATH) $(OBJS) -lpthread -o $(NAME)
 	@echo Compiled successfully!
 
 clean:

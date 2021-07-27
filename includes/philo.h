@@ -39,5 +39,8 @@ size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize);
 void		ft_parse_args(t_data *data, char **argv, int argc);
 void		ft_init(t_data *data, int argc);
 void		ft_checkargs(int argc, char **argv);
+void		ft_create_mutex(t_data *data);
+void		ft_create_threads(t_data *data);
+void		*PrintHello(t_data *data);
 
 # endif
